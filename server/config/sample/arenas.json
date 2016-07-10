@@ -1,0 +1,350 @@
+[
+    {
+        "_id": "574f2adf8e458e0f00b3526e",
+        "idName": "training-camp",
+        "number": 0,
+        "name": "Training Camp",
+        "victoryGold": 0,
+        "minTrophies": 0,
+        "__v": 0,
+        "cardUnlocks": [
+            "574de12cc7f71c0f00e4a73a",
+            "574de15fc7f71c0f00e4a73b",
+            "574de1fbc7f71c0f00e4a73c",
+            "574f025ec31b610f00b60c35",
+            "574f027fc31b610f00b60c36",
+            "574f02a3c31b610f00b60c37",
+            "574f02c2c31b610f00b60c38",
+            "574f02ddc31b610f00b60c39",
+            "574f0300c31b610f00b60c3a",
+            "574f031dc31b610f00b60c3b",
+            "574f0333c31b610f00b60c3c",
+            "574f0354c31b610f00b60c3d"
+        ],
+        "chests": [],
+        "clan": {
+            "donate": {
+                "common": 0,
+                "rare": 0
+            },
+            "request": {
+                "common": 0,
+                "rare": 0
+            }
+        }
+    },
+    {
+        "_id": "574f2af88e458e0f00b3526f",
+        "idName": "goblin-stadium",
+        "number": 1,
+        "name": "Goblin Stadium",
+        "victoryGold": 5,
+        "minTrophies": 0,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f037cc31b610f00b60c3e",
+            "574f0392c31b610f00b60c3f",
+            "574f03b0c31b610f00b60c40",
+            "574f03d1c31b610f00b60c41",
+            "574f03f2c31b610f00b60c42",
+            "574f040fc31b610f00b60c43"
+        ],
+        "chests": [
+            "574f0acac31b610f00b60c69",
+            "574f0ae3c31b610f00b60c6a",
+            "574f0bb7c31b610f00b60c6c",
+            "574f0bc8c31b610f00b60c6d",
+            "574f0c5ac31b610f00b60c6e",
+            "574f0c80c31b610f00b60c6f",
+            "574f0c96c31b610f00b60c70"
+        ],
+        "clan": {
+            "donate": {
+                "common": 1,
+                "rare": 1
+            },
+            "request": {
+                "common": 10,
+                "rare": 1
+            }
+        }
+    },
+    {
+        "_id": "574f2b308e458e0f00b35270",
+        "idName": "bone-pit",
+        "number": 2,
+        "name": "Bone Pit",
+        "victoryGold": 7,
+        "minTrophies": 400,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f042bc31b610f00b60c44",
+            "574f044cc31b610f00b60c45",
+            "574f0488c31b610f00b60c46",
+            "574f04b7c31b610f00b60c47",
+            "574f04d6c31b610f00b60c48",
+            "574f04fcc31b610f00b60c49"
+        ],
+        "chests": [
+            "574f25888e458e0f00b3523b",
+            "574f25a28e458e0f00b3523c",
+            "574f25c78e458e0f00b3523d",
+            "574f25e78e458e0f00b3523e",
+            "574f25fd8e458e0f00b3523f",
+            "574f26118e458e0f00b35240",
+            "574f262a8e458e0f00b35241"
+        ],
+        "clan": {
+            "donate": {
+                "common": 2,
+                "rare": 1
+            },
+            "request": {
+                "common": 10,
+                "rare": 1
+            }
+        }
+    },
+    {
+        "_id": "574f2b568e458e0f00b35271",
+        "idName": "barbarian-bowl",
+        "number": 3,
+        "name": "Barbarian Bowl",
+        "victoryGold": 9,
+        "minTrophies": 800,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f0519c31b610f00b60c4a",
+            "574f052bc31b610f00b60c4b",
+            "574f05f6c31b610f00b60c4c",
+            "574f0610c31b610f00b60c4d",
+            "574f062fc31b610f00b60c4e",
+            "574f0649c31b610f00b60c4f"
+        ],
+        "chests": [
+            "574f26468e458e0f00b35242",
+            "574f266b8e458e0f00b35243",
+            "574f26888e458e0f00b35244",
+            "574f269d8e458e0f00b35245",
+            "574f26b98e458e0f00b35246",
+            "574f26d78e458e0f00b35247",
+            "574f26f08e458e0f00b35248"
+        ],
+        "clan": {
+            "donate": {
+                "common": 2,
+                "rare": 1
+            },
+            "request": {
+                "common": 10,
+                "rare": 1
+            }
+        }
+    },
+    {
+        "_id": "574f2b6f8e458e0f00b35272",
+        "idName": "pekka's-playhouse",
+        "number": 4,
+        "name": "P.E.K.K.A.'s Playhouse",
+        "victoryGold": 11,
+        "minTrophies": 1100,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f0663c31b610f00b60c50",
+            "574f0678c31b610f00b60c51",
+            "574f0699c31b610f00b60c52",
+            "574f06bec31b610f00b60c53",
+            "574f06d3c31b610f00b60c54",
+            "574f06edc31b610f00b60c55",
+            "574f0712c31b610f00b60c56"
+        ],
+        "chests": [
+            "574f27098e458e0f00b35249",
+            "574f271b8e458e0f00b3524a",
+            "574f272f8e458e0f00b3524b",
+            "574f27498e458e0f00b3524c",
+            "574f27618e458e0f00b3524d",
+            "574f27728e458e0f00b3524e",
+            "574f27868e458e0f00b3524f"
+        ],
+        "clan": {
+            "donate": {
+                "common": 4,
+                "rare": 1
+            },
+            "request": {
+                "common": 20,
+                "rare": 2
+            }
+        }
+    },
+    {
+        "_id": "574f2b808e458e0f00b35273",
+        "idName": "spell-valley",
+        "number": 5,
+        "name": "Spell Valley",
+        "victoryGold": 12,
+        "minTrophies": 1400,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f0730c31b610f00b60c57",
+            "574f075dc31b610f00b60c58",
+            "574f0776c31b610f00b60c59",
+            "574f0797c31b610f00b60c5a",
+            "574f07bcc31b610f00b60c5b",
+            "574f0803c31b610f00b60c5d",
+            "574f0830c31b610f00b60c5e"
+        ],
+        "chests": [
+            "574f279a8e458e0f00b35250",
+            "574f27ad8e458e0f00b35251",
+            "574f27c98e458e0f00b35253",
+            "574f27db8e458e0f00b35254",
+            "574f27f48e458e0f00b35255",
+            "574f28068e458e0f00b35256",
+            "574f28198e458e0f00b35257"
+        ],
+        "clan": {
+            "donate": {
+                "common": 4,
+                "rare": 1
+            },
+            "request": {
+                "common": 20,
+                "rare": 2
+            }
+        }
+    },
+    {
+        "_id": "574f2b948e458e0f00b35274",
+        "idName": "builder's-workshop",
+        "number": 6,
+        "name": "Builder's Workshop",
+        "victoryGold": 14,
+        "minTrophies": 1700,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f0888c31b610f00b60c5f",
+            "574f08efc31b610f00b60c60",
+            "574f096ec31b610f00b60c61",
+            "574f0985c31b610f00b60c62",
+            "574f099dc31b610f00b60c63"
+        ],
+        "chests": [
+            "574f28288e458e0f00b35258",
+            "574f28428e458e0f00b35259",
+            "574f28598e458e0f00b3525a",
+            "574f28698e458e0f00b3525b",
+            "574f287c8e458e0f00b3525c",
+            "574f28948e458e0f00b3525d",
+            "574f28ad8e458e0f00b3525e"
+        ],
+        "clan": {
+            "donate": {
+                "common": 4,
+                "rare": 1
+            },
+            "request": {
+                "common": 20,
+                "rare": 2
+            }
+        }
+    },
+    {
+        "_id": "574f2ba48e458e0f00b35275",
+        "idName": "royal-arena",
+        "number": 7,
+        "name": "Royal Arena",
+        "victoryGold": 15,
+        "minTrophies": 2000,
+        "__v": 0,
+        "cardUnlocks": [
+            "574f09bdc31b610f00b60c64",
+            "574f09edc31b610f00b60c65",
+            "574f0a0fc31b610f00b60c66",
+            "574f0a2bc31b610f00b60c67",
+            "574f0a4ec31b610f00b60c68"
+        ],
+        "chests": [
+            "574f28be8e458e0f00b3525f",
+            "574f28cd8e458e0f00b35260",
+            "574f28df8e458e0f00b35261",
+            "574f28eb8e458e0f00b35262",
+            "574f28fa8e458e0f00b35263",
+            "574f29148e458e0f00b35264",
+            "574f29298e458e0f00b35265"
+        ],
+        "clan": {
+            "donate": {
+                "common": 6,
+                "rare": 1
+            },
+            "request": {
+                "common": 30,
+                "rare": 3
+            }
+        }
+    },
+    {
+        "_id": "574f2bb28e458e0f00b35276",
+        "idName": "legendary-arena",
+        "number": 9,
+        "name": "Legendary Arena",
+        "victoryGold": 20,
+        "minTrophies": 3000,
+        "__v": 0,
+        "cardUnlocks": [],
+        "chests": [
+            "574f29578e458e0f00b35267",
+            "574f296c8e458e0f00b35268",
+            "574f29788e458e0f00b35269",
+            "574f29858e458e0f00b3526a",
+            "574f29948e458e0f00b3526b",
+            "574f29aa8e458e0f00b3526c",
+            "574f29bf8e458e0f00b3526d"
+        ],
+        "clan": {
+            "donate": {
+                "common": 8,
+                "rare": 1
+            },
+            "request": {
+                "common": 40,
+                "rare": 4
+            }
+        }
+    },
+    {
+        "_id": "577a62bea5d6aa0f00244340",
+        "idName": "frozen-peak",
+        "number": 8,
+        "name": "Frozen Peak",
+        "victoryGold": 16,
+        "minTrophies": 2300,
+        "__v": 0,
+        "cardUnlocks": [
+            "577a5e3fa5d6aa0f00244336",
+            "577a5e8da5d6aa0f00244337",
+            "577a5eaea5d6aa0f00244338"
+        ],
+        "chests": [
+            "577a61d4a5d6aa0f00244339",
+            "577a6203a5d6aa0f0024433a",
+            "577a622ea5d6aa0f0024433b",
+            "577a624aa5d6aa0f0024433c",
+            "577a6279a5d6aa0f0024433d",
+            "577a628fa5d6aa0f0024433e",
+            "577a629fa5d6aa0f0024433f"
+        ],
+        "clan": {
+            "donate": {
+                "common": 6,
+                "rare": 1
+            },
+            "request": {
+                "common": 30,
+                "rare": 3
+            }
+        }
+    }
+]

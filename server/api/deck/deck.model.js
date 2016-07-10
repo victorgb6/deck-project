@@ -5,11 +5,11 @@ import mongoose from 'mongoose';
 var DeckSchema = new mongoose.Schema({
   active: Boolean,
   _creator : { type: String, ref: 'User' },
-  arenas: [{ type: Number, ref: 'Arena' }],
-  cards: [{ type: Number, ref: 'Cards' }],
+  arenas: [Number],
+  cards: [{ type: String, ref: 'Cards' }],
   meta: {
-    upvotes: Number,
-    downvotes:  Number
+    upvotes: [Date],
+    downvotes:  [Date]
   },
   comments: [{ body: String, date: Date }],
   date: { type: Date, default: Date.now }
