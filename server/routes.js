@@ -12,7 +12,6 @@ export default function(app) {
   app.use('/api/arenas', require('./api/arena'));
   app.use('/api/cards', require('./api/card'));
   app.use('/api/decks', require('./api/deck'));
-  app.use('/api/messages', require('./api/message'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 

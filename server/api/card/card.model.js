@@ -3,12 +3,15 @@
 import mongoose from 'mongoose';
 
 var CardSchema = new mongoose.Schema({
-  name: String,
-  arena: { type: Number, ref: 'Arena' },
-  image: String,
-  elixir: Number,
+  _id: String,
+  idName: String,
+  rarity: String,
   type: String,
-  tier: String
+  name: String,
+  description: String,
+  arena: Number,
+  elixirCost: Number,
+  __v: Number
 });
 
 export default mongoose.model('Card', CardSchema);
