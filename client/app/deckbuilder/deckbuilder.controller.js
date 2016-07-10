@@ -3,12 +3,18 @@
 (function(){
 
 class DeckbuilderComponent {
-  constructor($http, $filter) {
+  constructor($http, $filter, Auth) {
     this.$http = $http;
     this.$filter = $filter;
+
+    this.isLoggedIn = Auth.isLoggedIn;
+    this.isAdmin = Auth.isAdmin;
+    this.getCurrentUser = Auth.getCurrentUser;
+
     this.cards = [];
     this.arenas = [];
     this.deckCards = [];
+    this.deck = {};
   }
 
   $onInit() {
@@ -22,6 +28,9 @@ class DeckbuilderComponent {
       });
   }
 
+  /*
+  * Adds card to the deckCards array and remove it from the available cards array.
+  */
   addCard(cardId) {
     if (this.deckCards.length < 8) {
       this.found = this.$filter('filter')(this.cards, {_id: cardId}, true);
@@ -31,6 +40,9 @@ class DeckbuilderComponent {
     }
   }
 
+  /*
+  * Remove card from the deckCards array and add it to the available cards array.
+  */
   removeCard(cardId) {
     if (this.deckCards.length > 0) {
       this.found = this.$filter('filter')(this.deckCards, {_id: cardId}, true);
