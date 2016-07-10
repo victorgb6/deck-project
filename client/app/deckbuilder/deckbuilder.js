@@ -2,9 +2,8 @@
 
 angular.module('deckProjectApp')
   .config(function ($stateProvider) {
-    $stateProvider
-      .state('deckbuilder', {
-        url: '/deckbuilder',
-        template: '<deckbuilder></deckbuilder>'
-      });
+    $stateProvider.state('deckbuilder', {
+      url: '/deckbuilder',
+      template: '<deckbuilder></deckbuilder>'
+    });
   });

@@ -1,0 +1,32 @@
+.arena-list {
+  display: flex;
+  flex-direction: row;
+  li {
+    width: 10%;
+    img {
+      width: 100%;
+    }
+  }
+}
+.card-container {
+  height: 350px;
+  overflow-y: scroll;
+}
+.card-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  li {
+    width: 25%;
+    .card-info {
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
