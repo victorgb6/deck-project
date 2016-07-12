@@ -34,10 +34,16 @@ describe('Arena API:', function() {
     beforeEach(function(done) {
       request(app)
         .post('/api/arenas')
-        .send({
-          name: 'New Arena',
-          info: 'This is the brand new arena!!!'
-        })
+        .send({_id:'574f2adf8e458e0f00b3526e',
+        idName:'training-camp',
+        number:0,
+        name:'Training Camp',
+        victoryGold:0,
+        minTrophies:0,
+        __v:0,
+        cardUnlocks:['574de12cc7f71c0f00e4a73a','574de15fc7f71c0f00e4a73b','574de1fbc7f71c0f00e4a73c','574f025ec31b610f00b60c35','574f027fc31b610f00b60c36','574f02a3c31b610f00b60c37','574f02c2c31b610f00b60c38','574f02ddc31b610f00b60c39','574f0300c31b610f00b60c3a','574f031dc31b610f00b60c3b','574f0333c31b610f00b60c3c','574f0354c31b610f00b60c3d'],
+        chests:[],
+        clan:{'donate':{'common':0,'rare':0},'request':{'common':0,'rare':0}}})
         .expect(201)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -50,8 +56,8 @@ describe('Arena API:', function() {
     });
 
     it('should respond with the newly created arena', function() {
-      expect(newArena.name).to.equal('New Arena');
-      expect(newArena.info).to.equal('This is the brand new arena!!!');
+      expect(newArena.name).to.equal('Training Camp');
+      expect(newArena.number).to.equal(0);
     });
 
   });
@@ -78,8 +84,8 @@ describe('Arena API:', function() {
     });
 
     it('should respond with the requested arena', function() {
-      expect(arena.name).to.equal('New Arena');
-      expect(arena.info).to.equal('This is the brand new arena!!!');
+      expect(arena.name).to.equal('Training Camp');
+      expect(arena.number).to.equal(0);
     });
 
   });
@@ -91,8 +97,8 @@ describe('Arena API:', function() {
       request(app)
         .put('/api/arenas/' + newArena._id)
         .send({
-          name: 'Updated Arena',
-          info: 'This is the updated arena!!!'
+          name: 'Goblin Stadium',
+          number: '1'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -110,8 +116,8 @@ describe('Arena API:', function() {
     });
 
     it('should respond with the updated arena', function() {
-      expect(updatedArena.name).to.equal('Updated Arena');
-      expect(updatedArena.info).to.equal('This is the updated arena!!!');
+      expect(updatedArena.name).to.equal('Goblin Stadium');
+      expect(updatedArena.number).to.equal(1);
     });
 
   });

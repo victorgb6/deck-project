@@ -34,10 +34,15 @@ describe('Card API:', function() {
     beforeEach(function(done) {
       request(app)
         .post('/api/cards')
-        .send({
-          name: 'New Card',
-          info: 'This is the brand new card!!!'
-        })
+        .send({_id:'574de12cc7f71c0f00e4a73a',
+        idName:'arrows',
+        rarity:'Common',
+        type:'Spell',
+        name:'Arrows',
+        description:'Arrows pepper a large area, damaging everyone hit. Reduced damage to Crown Towers.',
+        arena: 0,
+        elixirCost: 3,
+        __v: 0})
         .expect(201)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -50,8 +55,8 @@ describe('Card API:', function() {
     });
 
     it('should respond with the newly created card', function() {
-      expect(newCard.name).to.equal('New Card');
-      expect(newCard.info).to.equal('This is the brand new card!!!');
+      expect(newCard.name).to.equal('Arrows');
+      expect(newCard.type).to.equal('Spell');
     });
 
   });
@@ -78,8 +83,8 @@ describe('Card API:', function() {
     });
 
     it('should respond with the requested card', function() {
-      expect(card.name).to.equal('New Card');
-      expect(card.info).to.equal('This is the brand new card!!!');
+      expect(card.name).to.equal('Arrows');
+      expect(card.type).to.equal('Spell');
     });
 
   });
@@ -92,7 +97,7 @@ describe('Card API:', function() {
         .put('/api/cards/' + newCard._id)
         .send({
           name: 'Updated Card',
-          info: 'This is the updated card!!!'
+          type: 'Troop'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -111,7 +116,7 @@ describe('Card API:', function() {
 
     it('should respond with the updated card', function() {
       expect(updatedCard.name).to.equal('Updated Card');
-      expect(updatedCard.info).to.equal('This is the updated card!!!');
+      expect(updatedCard.type).to.equal('Troop');
     });
 
   });

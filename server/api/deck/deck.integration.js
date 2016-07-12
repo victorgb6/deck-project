@@ -35,8 +35,8 @@ describe('Deck API:', function() {
       request(app)
         .post('/api/decks')
         .send({
-          name: 'New Deck',
-          info: 'This is the brand new deck!!!'
+          _creator: 'user',
+          arenas: [0,1]
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -50,8 +50,8 @@ describe('Deck API:', function() {
     });
 
     it('should respond with the newly created deck', function() {
-      expect(newDeck.name).to.equal('New Deck');
-      expect(newDeck.info).to.equal('This is the brand new deck!!!');
+      expect(newDeck._creator).to.equal('user');
+      expect(newDeck.arenas).to.be.instanceOf(Array);
     });
 
   });
@@ -78,8 +78,8 @@ describe('Deck API:', function() {
     });
 
     it('should respond with the requested deck', function() {
-      expect(deck.name).to.equal('New Deck');
-      expect(deck.info).to.equal('This is the brand new deck!!!');
+      expect(deck._creator).to.equal('user');
+      expect(deck.arenas).to.be.instanceOf(Array);
     });
 
   });
@@ -91,8 +91,8 @@ describe('Deck API:', function() {
       request(app)
         .put('/api/decks/' + newDeck._id)
         .send({
-          name: 'Updated Deck',
-          info: 'This is the updated deck!!!'
+          _creator: 'user1',
+          arenas: [0]
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -110,8 +110,8 @@ describe('Deck API:', function() {
     });
 
     it('should respond with the updated deck', function() {
-      expect(updatedDeck.name).to.equal('Updated Deck');
-      expect(updatedDeck.info).to.equal('This is the updated deck!!!');
+      expect(updatedDeck._creator).to.equal('user1');
+      expect(updatedDeck.arenas).to.be.instanceOf(Array);
     });
 
   });
