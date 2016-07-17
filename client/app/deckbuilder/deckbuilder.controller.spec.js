@@ -7,11 +7,15 @@ describe('Component: DeckbuilderComponent', function () {
 
   var DeckbuilderComponent;
   var $httpBackend;
+  var scope;
+  var state;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function (_$httpBackend_, $http, $componentController, $rootScope, $state) {
+  beforeEach(inject(function (_$httpBackend_, $http, $componentController, $rootScope, $state, $filter) {
     $httpBackend = _$httpBackend_;
     $httpBackend.expectGET('/api/cards')
+      .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
+    $httpBackend.expectGET('/api/arenas')
       .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
 
     scope = $rootScope.$new();
@@ -24,10 +28,10 @@ describe('Component: DeckbuilderComponent', function () {
     });
   }));
 
-  it('should attach a list of things to the controller', function() {
+  it('should attach a list of cards and arenas to the controller', function() {
     DeckbuilderComponent.$onInit();
     $httpBackend.flush();
-    expect(DeckbuilderComponent.cards.length)
-      .to.equal(4);
+    expect(DeckbuilderComponent.cards.length).to.be.above(0);
+    expect(DeckbuilderComponent.arenas.length).to.be.above(0);
   });
 });

@@ -1,6 +1,9 @@
 <div ng-show="Deckbuilder.isLoggedIn()" class="container">
   <div class="row">
     <div class="col-lg-12">
+      <h5>
+        Select the arenas you want your deck to be used:
+      </h5>
       <ul class="list-group arena-list">
         <li class="list-group-item" ng-repeat="arena in Deckbuilder.arenas | orderBy:'number'">
           <div class="arena-info" ng-click="Deckbuilder.toggleArena(arena.number)" ng-class="Deckbuilder.checkArena(arena.number) ? 'selected' : ''">
@@ -14,6 +17,7 @@
   </div>
   <div class="row">
     <div class="col-lg-6 card-container">
+      <h5>Select the cards you want in your deck:</h5>
       <ul class="list-group card-list">
         <li ng-show="Deckbuilder.checkArena(card.arena)" class="list-group-item" ng-repeat="card in Deckbuilder.cards | orderBy:'arena'">
           <div class="card-info" ng-click="Deckbuilder.addCard(card._id)">
@@ -23,6 +27,7 @@
       </ul>
     </div>
     <div class="col-lg-6">
+      <h5>This is your deck:</h5>
       <ul class="list-group card-list">
         <li class="list-group-item" ng-repeat="card in Deckbuilder.deckCards">
           <div class="card-info" ng-click="Deckbuilder.removeCard(card._id)">
