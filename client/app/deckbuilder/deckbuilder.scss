@@ -7,10 +7,19 @@
       width: 100%;
     }
     .arena-info {
-      strong {
+      cursor: pointer;
+      opacity: .3;
+      .arena-name {
         height: 37px;
-        display: inline-block;
+        margin: 5px 0;
         text-align: center;
+      }
+      &.selected {
+        opacity: 1;
+      }
+      .arena-number {
+        text-align: center;
+        margin: 5px 0 0;
       }
     }
   }

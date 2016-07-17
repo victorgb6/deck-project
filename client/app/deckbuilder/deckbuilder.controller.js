@@ -13,6 +13,7 @@ class DeckbuilderComponent {
 
     this.cards = [];
     this.arenas = [];
+    this.selectedArenas = [];
     this.deckCards = [];
     this.deck = {};
   }
@@ -25,6 +26,7 @@ class DeckbuilderComponent {
     this.$http.get('/api/arenas')
       .then(response => {
         this.arenas = response.data;
+        angular.copy(this.arenas, this.selectedArenas);
       });
   }
 
@@ -50,6 +52,27 @@ class DeckbuilderComponent {
       this.deckCards.splice(this.indexFound, 1);
       this.cards.push(this.found[0]);
     }
+  }
+
+  /*
+  * Adds card to the deckCards array and remove it from the available cards array.
+  */
+  toggleArena(arenaId) {
+    this.found = this.$filter('filter')(this.selectedArenas, {number: arenaId}, true);
+    if (this.found.length > 0) {
+      this.indexFound = this.selectedArenas.indexOf(this.found[0]);
+      this.selectedArenas.splice(this.indexFound, 1);
+    } else {
+      this.found = this.$filter('filter')(this.arenas, {number: arenaId}, true);
+      this.selectedArenas.push(this.found[0]);
+    }
+  }
+
+  /*
+  * Checks if an arena is selected
+  */
+  checkArena(arenaId) {
+    return this.$filter('filter')(this.selectedArenas, {number: arenaId}, true).length > 0 || false;
   }
 }
 

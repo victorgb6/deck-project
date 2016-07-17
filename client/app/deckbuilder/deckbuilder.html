@@ -3,9 +3,10 @@
     <div class="col-lg-12">
       <ul class="list-group arena-list">
         <li class="list-group-item" ng-repeat="arena in Deckbuilder.arenas | orderBy:'number'">
-          <div class="arena-info">
-            <strong>{{arena.name}}</strong>
+          <div class="arena-info" ng-click="Deckbuilder.toggleArena(arena.number)" ng-class="Deckbuilder.checkArena(arena.number) ? 'selected' : ''">
+            <p class="arena-name">{{arena.name}}</p>
             <img ng-src="/assets/images/arenas/{{arena.idName}}.png" alt="{{arena.name}}" />
+            <p class="arena-number">Arena {{arena.number}}</p>
           </div>
         </li>
       </ul>
@@ -14,7 +15,7 @@
   <div class="row">
     <div class="col-lg-6 card-container">
       <ul class="list-group card-list">
-        <li class="list-group-item" ng-repeat="card in Deckbuilder.cards | orderBy:'arena'">
+        <li ng-show="Deckbuilder.checkArena(card.arena)" class="list-group-item" ng-repeat="card in Deckbuilder.cards | orderBy:'arena'">
           <div class="card-info" ng-click="Deckbuilder.addCard(card._id)">
             <img ng-src="/assets/images/cards/{{card.idName}}.png" alt="{{card.name}}" />
           </div>
