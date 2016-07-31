@@ -10,7 +10,7 @@ var ArenaSchema = new mongoose.Schema({
   victoryGold: Number,
   minTrophies: Number,
   __v: Number,
-  cardUnlocks: [{ type: String, ref: 'Cards' }],
+  cardUnlocks: [{ type: String, ref: 'Card' }],
   chests: [String],
   clan: {donate: {common: Number, rare: Number}, request: {common: Number, rare: Number}}
 });

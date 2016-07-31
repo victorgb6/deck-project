@@ -3,14 +3,15 @@
 import mongoose from 'mongoose';
 
 var DeckSchema = new mongoose.Schema({
-  active: Boolean,
+  active: { type: Boolean, default: false },
   _creator : { type: String, ref: 'User' },
-  arenas: [Number],
-  cards: [{ type: String, ref: 'Cards' }],
+  arenas: [{ type: String, ref: 'Arena' }],
+  cards: [{ type: String, ref: 'Card' }],
   meta: {
     upvotes: [Date],
     downvotes:  [Date]
   },
+  description: String,
   comments: [{ body: String, date: Date }],
   date: { type: Date, default: Date.now }
 });

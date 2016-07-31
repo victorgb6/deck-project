@@ -34,4 +34,12 @@ describe('Component: DeckbuilderComponent', function () {
     expect(DeckbuilderComponent.cards.length).to.be.above(0);
     expect(DeckbuilderComponent.arenas.length).to.be.above(0);
   });
+
+  it('should add a card to the deck of cards', function() {
+    DeckbuilderComponent.$onInit();
+    $httpBackend.flush();
+    DeckbuilderComponent.addCard('574de12cc7f71c0f00e4a73a');
+    expect(DeckbuilderComponent.deckCards.length).to.be.above(0);
+    //expect(DeckbuilderComponent.deckCards[0]._id).to.equal('574de12cc7f71c0f00e4a73a');
+  });
 });

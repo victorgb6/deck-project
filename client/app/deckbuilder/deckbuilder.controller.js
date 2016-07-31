@@ -16,6 +16,7 @@ class DeckbuilderComponent {
     this.selectedArenas = [];
     this.deckCards = [];
     this.deck = {};
+    this.description = '';
   }
 
   $onInit() {
@@ -73,6 +74,24 @@ class DeckbuilderComponent {
   */
   checkArena(arenaId) {
     return this.$filter('filter')(this.selectedArenas, {number: arenaId}, true).length > 0 || false;
+  }
+
+  /*
+  * Submit a deck to the server
+  */
+  submitDeck() {
+    console.log('Submitting');
+    this.deck._creator = this.getCurrentUser;
+    this.deck.arenas = this.selectedArenas;
+    this.deck.cards = this.deckCards;
+    this.deck.description = this.description;
+    //Do the post request
+    this.$http.post('/api/decks', this.deck)
+      .then(response => {
+        console.log('POST success:', response);
+      }, error => {
+        console.log('POST error:', error);
+      });
   }
 }
 
