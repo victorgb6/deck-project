@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 var DeckSchema = new mongoose.Schema({
   active: { type: Boolean, default: false },
   _creator : { type: String, ref: 'User' },
+  name: String,
   arenas: [{ type: String, ref: 'Arena' }],
   cards: [{ type: String, ref: 'Card' }],
   meta: {

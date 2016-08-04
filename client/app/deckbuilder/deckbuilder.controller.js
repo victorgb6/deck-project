@@ -17,6 +17,7 @@ class DeckbuilderComponent {
     this.deckCards = [];
     this.deck = {};
     this.description = '';
+    this.name = '';
   }
 
   $onInit() {
@@ -85,6 +86,7 @@ class DeckbuilderComponent {
     this.deck.arenas = this.selectedArenas;
     this.deck.cards = this.deckCards;
     this.deck.description = this.description;
+    this.deck.name = this.name;
     //Do the post request
     this.$http.post('/api/decks', this.deck)
       .then(response => {

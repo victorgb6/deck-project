@@ -1,6 +1,14 @@
 <div ng-show="Deckbuilder.isLoggedIn()" class="container">
   <div class="row">
     <div class="col-lg-12">
+      <div class="form-group">
+        <label for="deckName">Name:</label>
+        <input type="text" class="form-control" ng-model="Deckbuilder.name" id="deckName" placeholder="Write a descriptive name for your deck">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
       <h5>
         Select the arenas you want your deck to be used:
       </h5>
