@@ -7,6 +7,7 @@ class DeckbuilderComponent {
     this.$http = $http;
     this.$filter = $filter;
 
+
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -18,7 +19,9 @@ class DeckbuilderComponent {
     this.deck = {};
     this.description = '';
     this.name = '';
+    this.avgelixir = 0;
   }
+
 
   $onInit() {
     this.$http.get('/api/cards')
@@ -41,6 +44,7 @@ class DeckbuilderComponent {
       this.indexFound = this.cards.indexOf(this.found[0]);
       this.cards.splice(this.indexFound, 1);
       this.deckCards.push(this.found[0]);
+      this.calculateElixir();
     }
   }
 
@@ -53,6 +57,7 @@ class DeckbuilderComponent {
       this.indexFound = this.deckCards.indexOf(this.found[0]);
       this.deckCards.splice(this.indexFound, 1);
       this.cards.push(this.found[0]);
+      this.calculateElixir();
     }
   }
 
@@ -78,6 +83,16 @@ class DeckbuilderComponent {
   }
 
   /*
+  * Calculates de average elixir cost of the deck
+  */
+  calculateElixir() {
+    var sum = 0;
+    this.deckCards.map(card => {
+      sum += card.elixirCost;
+    });
+    this.avgelixir = sum / this.deckCards.length;
+  }
+  /*
   * Submit a deck to the server
   */
   submitDeck() {
@@ -87,6 +102,7 @@ class DeckbuilderComponent {
     this.deck.cards = this.deckCards;
     this.deck.description = this.description;
     this.deck.name = this.name;
+    this.deck.avgelixir = this.avgelixir;
     //Do the post request
     this.$http.post('/api/decks', this.deck)
       .then(response => {

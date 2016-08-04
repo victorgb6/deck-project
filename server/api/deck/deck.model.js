@@ -12,6 +12,8 @@ var DeckSchema = new mongoose.Schema({
     upvotes: [Date],
     downvotes:  [Date]
   },
+  avgelixir: Number,
+  views: Number,
   description: String,
   comments: [{ body: String, date: Date }],
   date: { type: Date, default: Date.now }

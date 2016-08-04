@@ -46,11 +46,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-6 description-wrapper">
+    <div class="col-lg-6 bottom-wrapper">
       <div class="form-group">
         <label for="description">Description:</label>
         <textarea id="description" name="description" ng-model="Deckbuilder.description" required="description-error"></textarea>
       </div>
+    </div>
+    <div class="col-lg-6 bottom-wrapper">
+      <dl>
+        <dt>Avg. Elixir Cost: </dt>
+        <dd>{{Deckbuilder.avgelixir | number : 1}}</dd>
+      </dl>
     </div>
   </div>
   <div class="row">
