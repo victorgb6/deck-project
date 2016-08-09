@@ -1,14 +1,22 @@
 <div ng-show="Decklist.isLoggedIn()" class="container">
   <div class="row">
     <div class="col-lg-12">
-      <table class="table">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th>
-              Deck Name
+              <a href="#" ng-click="Decklist.sortType = 'name'; Decklist.sortReverse = !Decklist.sortReverse">
+                Deck Name
+                <span ng-show="Decklist.sortType == 'name' && !Decklist.sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="Decklist.sortType == 'name' && Decklist.sortReverse" class="fa fa-caret-up"></span>
+              </a>
             </th>
             <th>
-              Av. Elixir
+              <a href="#" ng-click="Decklist.sortType = 'avgelixir'; Decklist.sortReverse = !Decklist.sortReverse">
+                Av. Elixir
+                <span ng-show="Decklist.sortType == 'avgelixir' && !Decklist.sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="Decklist.sortType == 'avgelixir' && Decklist.sortReverse" class="fa fa-caret-up"></span>
+              </a>
             </th>
             <th>
               Type
@@ -28,9 +36,12 @@
           </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="deck in Decklist.decks">
+        <tr ng-repeat="deck in Decklist.decks | orderBy:Decklist.sortType:Decklist.sortReverse">
           <td>
             {{deck.name}}
+          </td>
+          <td>
+            {{deck.avgelixir}}
           </td>
         </tr>
       </tbody>
