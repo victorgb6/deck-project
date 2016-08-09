@@ -97,7 +97,8 @@ class DeckbuilderComponent {
   */
   submitDeck() {
     console.log('Submitting');
-    this.deck._creator = this.getCurrentUser;
+    this.deck._creator = this.getCurrentUser();
+    this.deck.ownerName = this.getCurrentUser().name;
     this.deck.arenas = this.selectedArenas;
     this.deck.cards = this.deckCards;
     this.deck.description = this.description;
