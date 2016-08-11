@@ -7,7 +7,6 @@ class DeckbuilderComponent {
     this.$http = $http;
     this.$filter = $filter;
 
-
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
