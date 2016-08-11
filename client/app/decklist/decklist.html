@@ -5,7 +5,7 @@
         <thead>
           <tr>
             <th>
-              <a href="#" ng-click="Decklist.sortType = 'name'; Decklist.sortReverse = !Decklist.sortReverse">
+              <a ng-click="Decklist.sortType = 'name'; Decklist.sortReverse = !Decklist.sortReverse">
                 Deck Name
                 <span ng-show="Decklist.sortType == 'name' && !Decklist.sortReverse" class="fa fa-caret-down"></span>
                 <span ng-show="Decklist.sortType == 'name' && Decklist.sortReverse" class="fa fa-caret-up"></span>
@@ -42,7 +42,7 @@
         <tr ng-repeat="deck in Decklist.decks | orderBy:Decklist.sortType:Decklist.sortReverse">
           <td>
             <span class="">
-              <a href="">{{deck.name}}</a>
+              <a ui-sref="deckdetail({ deckID: deck._id })">{{deck.name}}</a>
             </span>
           </td>
           <td>
