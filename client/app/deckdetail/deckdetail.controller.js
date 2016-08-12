@@ -7,6 +7,7 @@ class DeckdetailComponent {
     this.$http = $http;
     this.$stateParams = $stateParams;
     this.cards = [];
+    this.arenas = [];
   }
 
   $onInit() {
@@ -19,14 +20,27 @@ class DeckdetailComponent {
               self.cards.push(response.data);
           })
         });
+        this.deck.arenas.map(arenaId => {
+          self.getArena(arenaId).then(response => {
+            self.arenas.push(response.data);
+            console.log(self.arenas);
+          })
+        })
       });
   }
-  
+
   /*
   * Gets the card data from api
   */
   getCard(id) {
     return this.$http.get('/api/cards/'+id);
+  }
+
+  /*
+  * Gets the arena data from api
+  */
+  getArena(id) {
+    return this.$http.get('/api/arenas/'+id);
   }
 
 }

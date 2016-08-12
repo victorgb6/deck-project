@@ -8,4 +8,5 @@ angular.module('deckProjectApp', ['deckProjectApp.auth', 'deckProjectApp.admin',
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
+
   });

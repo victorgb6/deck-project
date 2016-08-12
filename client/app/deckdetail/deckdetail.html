@@ -1,8 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-6 deck-details">
       <h2>{{Deckdetail.deck.name}}</h2>
-      <span><strong>Creator:</strong>{{Deckdetail.deck.ownerName}}</span>
+      <span><strong>Creator: </strong>{{Deckdetail.deck.ownerName}}</span>
+      <span><strong>Type: </strong>{{Deckdetail.deck.type}}</span>
+      <span><strong>Created: </strong>{{Deckdetail.deck.date | date:'d/MMM/yy'}}</span>
+      <ul class="list-group button-list">
+        <li ng-repeat="arena in Deckdetail.arenas">
+          <span class="btn btn-primary btn-xs">Arena {{arena.number}}</span>
+        </li>
+      </ul>
     </div>
     <div class="col-lg-6">
       <p>Ad</p>
@@ -10,16 +17,12 @@
   </div>
   <div class="row">
     <div class="col-lg-6">
-      <div class="content-box">
-        <p>
-          Description text
-        </p>
+      <span><strong>Description: </strong></span>
+      <div ng-bind-html="Deckdetail.deck.description" class="content-box">
       </div>
     </div>
     <div class="col-lg-6">
-      <p>
-        Cards:
-      </p>
+      <span><strong>Cards: </strong></span>
       <ul class="list-group card-list">
         <li class="list-group-item" ng-repeat="card in Deckdetail.cards">
           <div class="card-info">
@@ -27,6 +30,11 @@
           </div>
         </li>
       </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      AD
     </div>
   </div>
   <div class="row">

@@ -1,18 +1,32 @@
-.card-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
-  align-content: flex-end;
-  li {
-    width: 25%;
-    .card-info {
-      cursor: pointer;
+.container {
+  .deck-details {
+    span {
+      display: block;
     }
-    img {
-      width: 100%;
+    .button-list {
+      li {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .card-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    li {
+      width: 25%;
+      .card-info {
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
 }
