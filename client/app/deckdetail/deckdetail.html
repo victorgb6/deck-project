@@ -2,14 +2,19 @@
   <div class="row">
     <div class="col-lg-6 deck-details">
       <h2>{{Deckdetail.deck.name}}</h2>
-      <span><strong>Creator: </strong>{{Deckdetail.deck.ownerName}}</span>
-      <span><strong>Type: </strong>{{Deckdetail.deck.type}}</span>
-      <span><strong>Created: </strong>{{Deckdetail.deck.date | date:'d/MMM/yy'}}</span>
-      <ul class="list-group button-list">
-        <li ng-repeat="arena in Deckdetail.arenas">
-          <span class="btn btn-primary btn-xs">Arena {{arena.number}}</span>
-        </li>
-      </ul>
+      <div class="col-lg-2">
+        <voting-component deck="Deckdetail.deck"></voting-component>
+      </div>
+      <div class="col-lg-10">
+        <span><strong>Creator: </strong>{{Deckdetail.deck.ownerName}}</span>
+        <span><strong>Type: </strong>{{Deckdetail.deck.type}}</span>
+        <span><strong>Created: </strong>{{Deckdetail.deck.date | date:'d/MMM/yy'}}</span>
+        <ul class="list-group button-list">
+          <li ng-repeat="arena in Deckdetail.arenas">
+            <span class="btn btn-primary btn-xs">Arena {{arena.number}}</span>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="col-lg-6">
       <p>Ad</p>

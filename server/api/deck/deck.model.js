@@ -10,8 +10,8 @@ var DeckSchema = new mongoose.Schema({
   arenas: [{ type: String, ref: 'Arena' }],
   cards: [{ type: String, ref: 'Card' }],
   meta: {
-    upvotes: [Date],
-    downvotes:  [Date]
+    upvotes: [{ user: { type: String, ref: 'User' }, date: Date }],
+    downvotes:  [{ user: { type: String, ref: 'User' }, date: Date }]
   },
   avgelixir: Number,
   views: Number,

@@ -8,24 +8,24 @@ class DeckdetailComponent {
     this.$stateParams = $stateParams;
     this.cards = [];
     this.arenas = [];
+    this.deck = {};
   }
 
   $onInit() {
     var self = this;
     this.$http.get('/api/decks/'+this.$stateParams.deckID)
       .then(response => {
-        this.deck = response.data;
-        this.deck.cards.map(cardId => {
+        self.deck = response.data;
+        self.deck.cards.map(cardId => {
           self.getCard(cardId).then(response => {
               self.cards.push(response.data);
-          })
+          });
         });
-        this.deck.arenas.map(arenaId => {
+        self.deck.arenas.map(arenaId => {
           self.getArena(arenaId).then(response => {
             self.arenas.push(response.data);
-            console.log(self.arenas);
-          })
-        })
+          });
+        });
       });
   }
 
