@@ -20,8 +20,8 @@
 
     }
 
-    $onChanges(changesObj) {
-      if (this.deck != undefined) {
+    $onChanges() {
+      if (this.deck !== undefined) {
         this.netvotes = this.deck.meta.upvotes.length - this.deck.meta.downvotes.length;
       }
     }
@@ -59,12 +59,12 @@
     checkVotes() {
       var result = true;
         this.deck.meta.upvotes.map(vote => {
-          if(vote.user == this.userId) {
+          if(vote.user === this.userId) {
             result = false;
           }
         });
         this.deck.meta.downvotes.map(vote => {
-          if(vote.user == this.userId) {
+          if(vote.user === this.userId) {
             result = false;
           }
         });
