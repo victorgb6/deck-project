@@ -38,7 +38,7 @@
     <div class="col-lg-6 card-container">
       <h5>Select the cards you want in your deck:</h5>
       <ul class="list-group card-list">
-        <li ng-show="Deckbuilder.checkArena(card.arena)" class="list-group-item" ng-repeat="card in Deckbuilder.cards | orderBy:'arena'">
+        <li  class="list-group-item" ng-repeat="card in Deckbuilder.cards | orderBy:'arena'">
           <div class="card-info" ng-click="Deckbuilder.addCard(card._id)">
             <img ng-src="/assets/images/cards/{{card.idName}}.png" alt="{{card.name}}" />
           </div>
