@@ -21,7 +21,7 @@
     }
 
     $onChanges() {
-      if (this.deck !== undefined) {
+      if (this.deck !== null) {
         this.netvotes = this.deck.meta.upvotes.length - this.deck.meta.downvotes.length;
       }
     }
@@ -40,7 +40,6 @@
           this.deck.meta.downvotes.push({user: this.userId, date: now});
           this.netvotes -= 1;
         }
-        console.log('DECK PUT', this.deck);
         this.$http.put('/api/decks/'+this.deck._id, this.deck)
           .then(response => {
             console.log('PUT success:', response);
